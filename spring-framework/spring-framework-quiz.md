@@ -417,8 +417,8 @@ Reference: [Logging in Spring Boot](https://www.baeldung.com/spring-boot-logging
 
 #### Q47. What is the difference between a JAR and a WAR distribution in Spring Boot?
 
-- [ ] Spring Boot can create a self-executable WAR file that runs without needing a servlet container. A JAR file has to be deployed to an existing web container such as Tomcat with seperate files for dependencies.
-- [ ] Spring Boot can create a JAR file that contains bytecode that interacts directly with the OS without needing a servlet container. A WAR file has to be deployed to an existing web container such as Tomcat with seperate files for dependencies.
+- [ ] Spring Boot can create a self-executable WAR file that runs without needing a servlet container. A JAR file has to be deployed to an existing web container such as Tomcat with separate files for dependencies.
+- [ ] Spring Boot can create a JAR file that contains bytecode that interacts directly with the OS without needing a servlet container. A WAR file has to be deployed to an existing web container such as Tomcat with separate files for dependencies.
 - [ ] The Spring Boot JAR file will be deployed to a Servlet container such as Tomcat on an existing running web server locally. The WAR file will be deployed to a cloud-based servlet container.
 - [x] Spring Boot can create a self-executable JAR file that contains all the dependencies and an embedded Servlet container. A WAR file has to be deployed to an existing web container such as Tomcat.
 
@@ -473,29 +473,29 @@ Explanation: missing `@Autowired` on `private TestService service` or on the set
 3. An action taken by an aspect at a particular join point.
 
 - [ ]
-     ```
-     1. Pointcut
-     2. Advice
-     3. Join point
-     ```
+  ```
+  1. Pointcut
+  2. Advice
+  3. Join point
+  ```
 - [ ]
-     ```
-     1. Join point
-     2. Pointcut
-     3. Advice
-     ```
+  ```
+  1. Join point
+  2. Pointcut
+  3. Advice
+  ```
 - [ ]
-     ```
-     1. Advice
-     2. Pointcut
-     3. Join point
-     ```
+  ```
+  1. Advice
+  2. Pointcut
+  3. Join point
+  ```
 - [x]
-     ```
-     1. Pointcut
-     2. Join point
-     3. Advice
-     ```
+  ```
+  1. Pointcut
+  2. Join point
+  3. Advice
+  ```
 
 #### Q52. How should passwords be stored?
 
@@ -550,7 +550,7 @@ class TestConfig2 {
 - [ ] a NullPointerException stacktrace
 - [x] a BeanDefinitionParsingException stacktrace
 
-Explanation: `@Bean`-method in `@Configuration` must be overridable. Remove the `final` keyword to fix. 
+Explanation: `@Bean`-method in `@Configuration` must be overridable. Remove the `final` keyword to fix.
 
 #### Q55. What is the purpose of a web application context?
 
@@ -640,34 +640,54 @@ class Service {}
 - [x] The application will compile and run, but service will not be autowired because you cannot autowire a static class member.
 - [ ] The application will result in a compile error because you attempted to autowire a static variable.
 
-#### Q61. What is a security context? 
+#### Q61. What is a security context?
 
 - [x] The security context includes details of the principal currently using the app, which is stored by default in a `ThreadLocal` in an `Authentication` object.
-- [ ] The security context holds a list of all users and their encrypted passwords in memory and a list of resources that users are able to access. 
-- [ ] The security context includes information about safe network IDs and IP addresses that are able to access the system. 
-- [ ] The security context includes information about permissions on the local file system describing how local file resources can be accessed. 
+- [ ] The security context holds a list of all users and their encrypted passwords in memory and a list of resources that users are able to access.
+- [ ] The security context includes information about safe network IDs and IP addresses that are able to access the system.
+- [ ] The security context includes information about permissions on the local file system describing how local file resources can be accessed.
 
-#### Q62. How might you map an incoming request to a controller method? 
+#### Q62. How might you map an incoming request to a controller method?
 
-- [ ] Annotate a Controller class with `@Controller`. Then, using a specific naming convention for the methods, the `RequestMappingHandlerAdapter` will automatically configure your endpoints with the proper HTTP verb and URI. 
-- [ ] Register a controller as a bean. Then, using a specific naming convention for the methods, the `RequestMappingHandlerAdapter` will automatically configure your endpoints based on values from the YAML config file. 
-- [x] Annotate a controller method with `@RequestMapping`, or a HTTP verb-specific annotation with a String URI pattern parameter (and other params as needed), which is supported through a `RequestMappingHandlerMapping/Adapter`. 
-- [ ] Register a controller as a bean. Then, using a specific naming convention for the methods, the RequestMappingHandlerAdapter will automatically configure your endpoints based on values passed into the bean definition. 
+- [ ] Annotate a Controller class with `@Controller`. Then, using a specific naming convention for the methods, the `RequestMappingHandlerAdapter` will automatically configure your endpoints with the proper HTTP verb and URI.
+- [ ] Register a controller as a bean. Then, using a specific naming convention for the methods, the `RequestMappingHandlerAdapter` will automatically configure your endpoints based on values from the YAML config file.
+- [x] Annotate a controller method with `@RequestMapping`, or a HTTP verb-specific annotation with a String URI pattern parameter (and other params as needed), which is supported through a `RequestMappingHandlerMapping/Adapter`.
+- [ ] Register a controller as a bean. Then, using a specific naming convention for the methods, the RequestMappingHandlerAdapter will automatically configure your endpoints based on values passed into the bean definition.
 
 Reference: [Spring RequestMapping](https://www.baeldung.com/spring-requestmapping). Spring does not use naming conventions for web requests (unlike e.g. for the Data Repositories)
 
-#### Q63. What methods does the Pointcut expression below reference? 
+#### Q63. What methods does the Pointcut expression below reference?
 
 `execution(* setter*(..))`
 
-- [ ] any method with a name that contains the String "setter" with a single parameter 
-- [ ] any method with a name that begins with String "setter" with a single parameter 
-- [ ] any method with a name that begins with String "setter" 
-- [ ] any method with a name that contains the String "setter" 
+- [ ] any method with a name that contains the String "setter" with a single parameter
+- [ ] any method with a name that begins with String "setter" with a single parameter
+- [ ] any method with a name that begins with String "setter"
+- [ ] any method with a name that contains the String "setter"
 
-#### Q64. What pattern does Spring MVC implement to delegate request processing to controllers? 
+#### Q64. What pattern does Spring MVC implement to delegate request processing to controllers?
 
-- [x] Front Controller 
+- [x] Front Controller
 - [ ] Facade
 - [ ] Reactive Chain
-- [ ] Observer 
+- [ ] Observer
+
+#### Q65. What methods does this Pointcut expression?
+
+`within(com.linkedin.service..*)`
+
+- [ ] any join point only within the service package
+- [ ] This is not valid Pointcut expression
+- [ ] any method in a class that autowires a service bean
+- [x] any join point within the service package or one of its subpackages
+
+#### Q66. What is the output from invoking this Actuator endpoint in an unmodified Spring Boot application generated using Spring Intializr?
+
+`/shutdown`
+
+- [x] The request would fail because the endpoint is disabled by default.
+- [ ] The Spring Boot app would return a URL and a list of currently running processes, and ask you to confirm the shutdown command.
+- [ ] The Spring Boot app would return a URL to confirm the shutdown command.
+- [ ] The Spring Boot app would begin shutting down.
+
+Reason: By default, all the endpoints are enabled in Spring Boot Application except /shutdown; this is, naturally, part of the Actuator endpoints.

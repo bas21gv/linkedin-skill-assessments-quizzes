@@ -508,20 +508,20 @@ aws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a
 
 #### Q63. Your application performance management (APM) system can read the status of your CloudWatch monitors and perform scripted actions. When the CloudWatch metric StatusCheckFailed enters a failed state (a value of 1), you would like your APM to automatically repair the instance. Which script do you use?
 
-- [x]
+- [x] A
 
 ```
 aws ec2 stop-instances --instance-ids i-0b263919b6498b123
 aws ec2 start-instances --instance-ids i-0b263919b6498b123
 ```
 
-- [ ]
+- [ ] B
 
 ```
 aws ec2 reboot-instances --instance-ids i-0b263919b6498b123
 ```
 
-- [ ]
+- [ ] C
 
 ```
 aws ec2 reboot-instances --instance-ids i-0b263919b6498b123
@@ -529,7 +529,7 @@ wait 30
 aws ec2 start-instance --instance-ids i-0b263919b6498b123
 ```
 
-- [ ]
+- [ ] D
 
 ```
 aws ec2 reboot-instances --instance-ids i-0b263919b6498b123
@@ -708,3 +708,12 @@ aws ecs create-service \
 - [ ] Have your front-end application test the latency between each data center and use the data center that is responding the fastest.
 
 [Reference](https://aws.amazon.com/premiumsupport/knowledge-center/geolocation-routing-policy/)
+
+#### Q78. You have recently launched your new web product and are expecting 1.000 new users each month. However, you have just received word from the CEO that your product will be featured at an upcoming conference covered by several media outlets, and this could lead to 20,000 new users over the next week. How do you plan for a sudden increase in traffic?
+
+- [ ] Replicate your infrastructure across two regions. You will harden the application to a regional failure and you will double your capacity.
+- [ ] Take an AMI image of a front-end server to save your configuration and then add more servers to your cluster pror to the conference. Remove the servers from the cluster after the spike from the conference.
+- [ ] Test to determine your throughput and how many users you can support. Develop a scaling plan for your front end, microservices, and database based on CloudWatch metrics that align with the tested bottlenecks.
+- [x] Use Auto Scaling groups to create more front-end servers when the CloudWatch metrics for CPU usage on a single instance rise above 80% for five minutes.
+
+[Reference](https://aws.amazon.com/ec2/autoscaling/)

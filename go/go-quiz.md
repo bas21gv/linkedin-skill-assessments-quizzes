@@ -79,7 +79,7 @@ func main() {
 - [ ] It would compile and print nothing because `"[" +nil+"]"` is also `nil`.
 - [ ] It would compile but then panic because `GlobalFlag` was never initialized.
 
-Explanation: most [variables](https://golangbyexample.com/variables-in-golang-complete-guide/) in Go has initial values. For string type it's an empty string.
+Explanation: most [variables](https://golangbyexample.com/variables-in-golang-complete-guide/) in Go have initial values. For string type, it's an empty string.
 
 Here is this program on [Go Playground](https://play.golang.org/p/TaRIzuD-nxC)
 
@@ -123,7 +123,7 @@ func main() {
 
 - [ ] use `json.Decoder`
 - [ ] Pass a pointer to `data`
-- [x] Make `X` and `Y` exported (upercase)
+- [x] Make `X` and `Y` exported (uppercase)
 - [ ] Use field tags
 
 Reference: [How to Parse JSON in Golang?](https://www.geeksforgeeks.org/how-to-parse-json-in-golang/)
@@ -234,3 +234,168 @@ Example on [Go Playground](https://play.golang.org/p/TXF_JBvThp6)
 - [ ] a lightweight thread for concurrent programming
 
 Reference: [Channels](https://tour.golang.org/concurrency/2)
+
+#### Q18. How can you make a file build only on Windows?
+
+- [ ] Check runtime.GOOS.
+- [ ] Add a // +build windows comment anywhere in the file.
+- [ ] Add a \_ prefix to the file name.
+- [x] Add a // +build windows comment at the top of the file.
+
+Reference: [How to use conditional compilation with the go build tool, Oct 2013](https://dave.cheney.net/2013/10/12/how-to-use-conditional-compilation-with-the-go-build-tool)
+
+#### Q19. What is the correct way to pass this as a body of an HTTP POST request?
+
+```go
+data := "A group of Owls is called a parliament"
+```
+
+- [ ] resp, err := http.Post("https://httpbin.org/post", "text/plain", []byte(data))
+- [ ] resp, err := http.Post("https://httpbin.org/post", "text/plain", data)
+- [x] resp, err := http.Post("https://httpbin.org/post", "text/plain", strings.NewReader(data))
+- [ ] resp, err := http.Post("https://httpbin.org/post", "text/plain", &data)
+
+Reference: [net/http#Client.Post](https://pkg.go.dev/net/http#Client.Post)
+
+#### Q20. What should the idiomatic name be for an interface with a single method and the signature `Save() error`?
+
+- [ ] Saveable
+- [ ] SaveInterface
+- [ ] ISave
+- [x] Saver
+
+Reference: [Effective Go, Interface names](https://golang.org/doc/effective_go#interface-names)
+
+#### Q21. A `switch` statement **\_** its own lexical block. Each `case` statement **\_** an additional lexical block.
+
+- [ ] does not create; creates
+- [ ] does not create; does not create
+- [x] creates; creates
+- [ ] creates; does not create
+
+Reference: [Go Language Core technology (Volume one) 1.5-scope](https://topic.alibabacloud.com/a/go-language-core-technology-volume-one-15-font-colorredscopefont_1_38_30923325.html)
+
+Relevant excerpt from the article:
+
+> _The second if statement is nested inside the first, so a variable declared in the first if statement is visible to the second if statement. There are similar rules in switch: Each case has its own lexical block in addition to the conditional lexical block._
+
+#### Q22. What is the default case sensitivity of the JSON `Unmarshal` function?
+
+- [x] The default behavior is case insensitive, but it can be overridden.
+- [ ] Fields are matched case sensitive.
+- [ ] Fields are matched case insensitive.
+- [ ] The default behavior is case sensitive, but it can be overridden.
+
+Reference: [encoding/json#Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal)
+
+Relevant excerpt from the article:
+
+> _To unmarshal JSON into a struct, Unmarshal matches incoming object keys to the keys used by Marshal (either the struct field name or its tag), preferring an exact match but also accepting a case-insensitive match. By default, object keys which don't have a corresponding struct field are ignored (see Decoder.DisallowUnknownFields for an alternative)._
+
+#### Q23. What is the difference between the `time` package’s `Time.Sub()` and `Time.Add()` methods?
+
+- [ ] Time.Add() is for performing addition while Time.Sub() is for nesting timestamps.
+- [ ] Time.Add() always returns a later time while time.Sub always returns an earlier time.
+- [x] They are opposites. Time.Add(x) is the equivalent of Time.Sub(-x).
+- [ ] Time.Add() accepts a Duration parameter and returns a Time while Time.Sub() accepts a Time parameter and returns a Duration.
+
+Reference: [time#Time.Add](https://pkg.go.dev/time#Time.Add)
+
+Reference: [time#Time.Sub](https://pkg.go.dev/time#Time.Sub)
+
+#### Q24. What is the risk of using multiple field tags in a single struct?
+
+- [ ] Every field must have all tags to compile.
+- [x] It tightly couples different layers of your application.
+- [ ] Any tags after the first are ignored.
+- [ ] Missing tags panic at runtime.
+
+Reference: [Example Code / b29r0fUD1cp](https://play.golang.org/p/b29r0fUD1cp)
+
+#### Q25. Where is the built-in recover method useful?
+
+- [ ] in the main function
+- [ ] immediately after a line that might panic
+- [x] inside a deferred function
+- [ ] at the beginning of a function that might panic
+
+Reference: [Example of Recover Function in Go (Golang)](https://golangbot.com/panic-and-recover/#recoveringfromapanic)
+
+Relevant excerpt from the article:
+
+> _Recover is useful only when called inside deferred functions. Executing a call to recover inside a deferred function stops the panicking sequence by restoring normal execution and retrieves the error message passed to the panic function call. If recover is called outside the deferred function, it will not stop a panicking sequence._
+
+#### Q26. Which choice does _not_ send output to standard error?
+
+- [x] println(message)
+- [ ] log.New(os.Stderr, "", 0).Println(message)
+- [ ] fmt.Errorf("%s\n", message)
+- [ ] fmt.Fprintln(os.Stderr, message)
+
+#### Q27. How can you tell Go to import a package from a different location?
+
+- [ ] Use a proxy.
+- [ ] Change the import path.
+- [x] Use a replace directive in go.mod.
+- [ ] Use a replace directory.
+
+#### Q28. If your current working directory is the top level of your project, which command will run all its test packages?
+
+- [ ] go test all
+- [ ] go run --all
+- [ ] go test .
+- [x] go test ./...
+
+Reference: [Example of testing in Go (Golang)](https://pkg.go.dev/testing)
+
+Reference: [Example of cmd in Go (Golang)](https://pkg.go.dev/cmd/go)
+
+Relevant excerpt from the article:
+
+> _Relative patterns are also allowed, like "go test ./..." to test all subdirectories._
+
+#### Q29. Which encodings can you put in a string?
+
+- [ ] any, it accepts arbitary bytes
+- [ ] any Unicode format
+- [ ] UTF-8 or ASCII
+- [x] UTF-8
+
+Reference: [Example of encoding in Go (Golang)](https://pkg.go.dev/golang.org/x/text/encoding)
+
+Relevant excerpt from the article:
+
+> _Package encoding defines an interface for character encodings, such as Shift JIS and Windows 1252, that can convert to and from UTF-8._
+
+#### Q30. How is the behavior of `t.Fatal` different inside a `t.Run`?
+
+- [ ] There is no difference.
+- [ ] t.Fatal does not crash the test harness, preserving output messages.
+- [ ] t.Fatal stops execution of the subtest and continues with other test cases.
+- [ ] t.Fatal stops all tests and contains extra information about the failed subtest.
+
+#### Q31. What does `log.Fatal` do?
+
+- [ ] It raises a panic.
+- [ ] It prints the log and then raises a panic.
+- [x] It prints the log and then safely exits the program.
+- [ ] It exits the program.
+
+Reference: [Example of func Fatal in Go (Golang)](https://pkg.go.dev/log#Fatal)
+
+Relevant excerpt from the article:
+
+> _Fatal is equivalent to Print() followed by a call to os.Exit(1)._
+
+#### Q32. Which is a valid Go time format literal?
+
+- [x] "2006-01-02"
+- [ ] "YYYY-mm-dd"
+- [ ] "y-mo-d"
+- [ ] "year-month-day"
+
+Reference: [Example of func Time in Go (Golang)](https://pkg.go.dev/time)
+
+Relevant excerpt from the article:
+
+> _Most programs can use one of the defined constants as the layout passed to Format or Parse. The rest of this comment can be ignored unless you are creating a custom layout string._

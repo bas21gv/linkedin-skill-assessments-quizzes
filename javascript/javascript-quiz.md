@@ -1055,3 +1055,70 @@ console.log(rainForests);
 - [x] `["Cerrado", "Congo"]`
 - [ ] `["Congo"]`
 - [ ] `["Amazon","Borneo"]`
+
+#### Q94. Which missing line would allow you to create five variables(one,two,three,four,five) that correspond to their numerical values (1,2,3,4,5)?
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+//MISSING LINE
+```
+
+- [x] `const [one,two,three,four,five]=numbers`
+- [ ] `const {one,two,three,four,five}=numbers`
+- [ ] `const [one,two,three,four,five]=[numbers]`
+- [ ] `const {one,two,three,four,five}={numbers}`
+
+#### Q95.
+
+```js
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const obj2 = {
+  ...obj,
+  a: 0,
+};
+
+console.log(obj2.a, obj2.b);
+```
+
+- [ ] Nothing, it will throw an error
+- [x] 0 2
+- [ ] undefined 2
+- [ ] undefined 2
+
+#### Q96. What is the output of this code?
+
+```js
+let rainForests = ['Amazon', 'Borneo', 'Cerrado', 'Congo'];
+rainForests.splice(0, 2);
+console.log(rainForests);
+```
+
+- [ ] `["Amazon","Borneo","Cerrado","Congo"]`
+- [x] `["Cerrado", "Congo"]`
+- [ ] `["Congo"]`
+- [ ] `["Amazon","Borneo"]`
+
+#### Q97. What line is missing from this code?
+
+```js
+//Missing Line
+for (var i = 0; i < vowels.length; i++) {
+  console.log(vowels[i]);
+  //Each letter printed on a separate line as follows;
+  //a
+  //e
+  //i
+  //o
+  //u
+}
+```
+
+- [ ] `let vowels = "aeiou".toArray();`
+- [ ] `let vowels = Array.of("aeiou");`
+- [ ] `let vowels = {"a", "e", "i", "o", "u"};`
+- [x] `let vowels = "aeiou";`

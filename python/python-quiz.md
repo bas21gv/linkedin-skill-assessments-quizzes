@@ -779,10 +779,10 @@ t1 = test()
 
 #### Q55. What is the correct syntax for creating a variable that is bound to a set?
 
-- [x] `myset = {0, 'apple', 3.5}`
-- [ ] `myset = to_set(0, 'apple', 3.5)`
-- [ ] `myset = (0, 'apple', 3.5).to_set()`
-- [ ] `myset = (0, 'apple', 3.5).set()`
+- [x] `my_set = {0, 'apple', 3.5}`
+- [ ] `my_set = to_set(0, 'apple', 3.5)`
+- [ ] `my_set = (0, 'apple', 3.5).to_set()`
+- [ ] `my_set = (0, 'apple', 3.5).set()`
 
 #### Q56. What is the correct syntax for defining an `__init__()` method that takes no parameters?
 
@@ -1266,7 +1266,7 @@ np.ones([1,2,3,4,5])
 #### Q92. This code provides the \_ of the list of numbers
 
 ```python
-num_list =[21,13,19,3,11,5,18]
+num_list = [21,13,19,3,11,5,18]
 num_list.sort()
 num_list[len(num_list)//2]
 ```
@@ -1307,3 +1307,69 @@ num_list[len(num_list)//2]
 - [ ] The **init** method initializes any imports you may have included at the top of your file.
 
 [reference here](https://stackoverflow.com/questions/625083/what-init-and-self-do-in-python)
+
+#### Q97. What is the correct syntax for calling an instance method on a class named Game?
+
+- [ ] my_game = Game(self) self.my_game.roll_dice()
+- [x] my_game = Game() self.my_game.roll_dice()
+- [ ] my_game = Game() my_game.roll_dice()
+- [ ] my_game = Game(self) my_game.roll_dice(self)
+
+#### Q98. What is the output of this code? (NumPy has been imported as np.)?
+
+```
+a = np.array([1,2,3,4])
+print(a[[False, True, False, False]])
+```
+
+- [ ] {0,2}
+- [x] [2]
+- [ ] {2}
+- [ ] [0,2,0,0]
+
+#### Q99. Suppose you have a string variable defined as y=”stuff;thing;junk;”. What would be the output from this code?
+
+```
+Z = y.split(‘;’)
+len(z)
+```
+
+- [ ] 17
+- [x] 4
+- [ ] 0
+- [ ] 3
+
+explanation:
+
+```
+y=”stuff;thing;junk”
+	len(z) ==> 3
+
+y=”stuff;thing;junk;”
+	len(z) ==> 4
+```
+
+#### Q100. What is the output of this code?
+
+```
+num_list = [1,2,3,4,5]
+num_list.remove(2)
+print(num_list)
+```
+
+- [ ] [1,2,4,5]
+- [x] [1,3,4,5]
+- [ ] [3,4,5]
+- [ ] [1,2,3]
+
+explanation:
+
+```
+num_list = [1,2,3,4,5]
+
+num_list.pop(2)
+	[1,2,4,5]
+
+num_list.remove(2)
+	[1,3,4,5]
+```

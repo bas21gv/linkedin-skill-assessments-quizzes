@@ -536,3 +536,17 @@ console.log(person);
 - [ ] doesNotThrow
 - [ ] deepStrictEqual
 - [x] ifError
+
+#### Q65. Which choice is not a method on the util module?
+
+- [ ] promisify
+- [x] asyncify
+- [ ] types
+- [ ] callbackify
+
+#### Q65. Which choice is not a subclass of the Error class?
+
+- [x] GlobalError
+- [ ] TypeError
+- [ ] RangeError
+- [ ] AssertionError
