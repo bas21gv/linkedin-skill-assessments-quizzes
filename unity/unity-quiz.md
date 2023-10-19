@@ -7,13 +7,13 @@
 - [ ] Gizmos
 - [x] Play mode tint
 
-#### Q2. A developer executes the C# code below, which finds any game objects tagged as “enemy” in a start event. But the developer notices that, when executed, FindGameObjectsWithTag returns NULL even though the scene contains objects tagged as “Enemy”. What is a possible cause?
+#### Q2. A developer executes the C# code below, which finds any game objects tagged as "enemy" in a start event. But the developer notices that, when executed, FindGameObjectsWithTag returns NULL even though the scene contains objects tagged as "Enemy". What is a possible cause?
 
-`GameObject[] MyEnemies = GameObject.FindGameObjectsWithTag(“Enemy”);`
+`GameObject[] MyEnemies = GameObject.FindGameObjectsWithTag("Enemy");`
 
 - [ ] The objects are animated
 - [ ] The objects are on the UI layer
-- [ ] The objects are not named “Enemy”
+- [ ] The objects are not named "Enemy"
 - [x] The objects are deactivated
 
 #### Q3. What does this code sample achieve? Float Answer = Random.value \* 10f;
@@ -31,9 +31,9 @@
 - [ ] To improve platform compatibility
 
 > Also, the text data can be generated and parsed by tools, making it possible to create and analyze scenes automatically.
-> https://docs.unity3d.com/2021.2/Documentation/Manual/TextSceneFormat.html
+> [Reference](https://docs.unity3d.com/2021.2/Documentation/Manual/TextSceneFormat.html)
 
-#### Q5. Orthographic cameras remove which visual effect?
+#### Q5. Which visual effects are removed by Orthographic cameras?
 
 - [ ] Gamma color space
 - [ ] Depth of field
@@ -41,8 +41,9 @@
 - [ ] Bloom
 
 Gamma color space and bloom are related to graphics. Depth of field is related to objects bluring when at a certain distance from the camera.
-https://docs.unity3d.com/2019.3/Documentation/Manual/CamerasOverview.html
-https://pbr-book.org/3ed-2018/Camera_Models/Projective_Camera_Models#OrthographicCamera
+
+1. [Reference](https://docs.unity3d.com/2022.3/Documentation/Manual/CamerasOverview.html)
+2. [Reference](https://pbr-book.org/3ed-2018/Camera_Models/Projective_Camera_Models#OrthographicCamera)
 
 #### Q6. What is Cinemachine Virtual Camera used for?
 
@@ -52,7 +53,7 @@ https://pbr-book.org/3ed-2018/Camera_Models/Projective_Camera_Models#Orthographi
 - [ ] To act as dummy cameras for fooling meshes into thinking they are being seen
 
 > Use the Aim, Body, and Noise properties to specify how the Virtual Camera animates position, rotation, and other properties. The Virtual Camera applies these settings to the Unity Camera when Cinemachine Brain or Timeline transfers control of the Unity camera to the Virtual Camera.
-> https://docs.unity3d.com/Packages/com.unity.cinemachine@2.9/manual/CinemachineVirtualCamera.html
+> [Reference](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.9/manual/CinemachineVirtualCamera.html)
 
 #### Q7. What does the Microphone class save captured audio data as?
 
@@ -62,7 +63,7 @@ https://pbr-book.org/3ed-2018/Camera_Models/Projective_Camera_Models#Orthographi
 - [ ] An OGG file
 
 The Microphone class saves captured audio as an audio clip asset, which may then be stored as a OGG file.
-https://docs.unity3d.com/ScriptReference/Microphone.html
+[Reference](https://docs.unity3d.com/ScriptReference/Microphone.html)
 
 #### Q8. Cinemachine offers tools for building gameplay behaviours. Which component makes spline based paths for moving objects?
 
@@ -71,15 +72,14 @@ https://docs.unity3d.com/ScriptReference/Microphone.html
 - [ ] Cinemachine Free Look
 - [ ] Cinemachine Brain
 
-#### Q9. When building assets like meshes for Unity. It is good practice to use which measurement unit?
+#### Q9. When building assets like meshes for Unity. Which measurement unit is the most suitable to use?
 
 - [ ] Cubits
 - [ ] Feet
 - [ ] Inches
 - [x] Meters
 
-Unity's default units are in meters (Unreal Engine too). If you keep this in mind and model with your units alined to meters, the lighting system will work minimal artifacting.
-https://docs.unity3d.com/2019.3/Documentation/Manual/BestPracticeMakingBelievableVisuals1.html
+[Reference](https://docs.unity3d.com/2019.3/Documentation/Manual/BestPracticeMakingBelievableVisuals1.html)Unity's default units are in meters (Unreal Engine too). If you keep this in mind and model with your units alined to meters, the lighting system will work minimal artifacting.
 
 #### Q10. The Collaborate feature of Unity Teams empowers whom to do what?
 
@@ -106,8 +106,10 @@ https://docs.unity3d.com/2019.3/Documentation/Manual/BestPracticeMakingBelievabl
 
 - [ ] OnBecameInvisible
 - [ ] OnAnimatorMove
-- [ ] Reset
-- [x] OnTriggerEnter
+- [x] Reset
+- [ ] OnTriggerEnter
+
+* Explain- The Reset method is a MonoBehaviour method that runs by default in Editor mode. This method is called when the script is attached to a GameObject or reset in the Inspector. It allows you to initialize or reset the values of variables in the script, ensuring a consistent initial state when working in the Unity Editor.
 
 #### Q14. For the OnTriggerEnter function to invoke successfully on a collision between two objects, at least one must have which two components?
 
@@ -172,7 +174,7 @@ https://docs.unity3d.com/2019.3/Documentation/Manual/BestPracticeMakingBelievabl
 - [ ] Serializable
 - [x] SerializedField
 
-https://docs.unity3d.com/ScriptReference/SerializeField.html
+[Reference](https://docs.unity3d.com/ScriptReference/SerializeField.html)
 
 #### Q23. What is a technique for optimizing Unity UI elements?
 
@@ -181,21 +183,21 @@ https://docs.unity3d.com/ScriptReference/SerializeField.html
 - [ ] Group as many UI elements as possible onto only one canvas
 - [ ] Divide the screen into multiple canvas objects, each sized to a quarter of the screen size
 
-Every time an element on a canvas is updated, the whole canvas is redrawn. If elements are never being updated, keeping them on a single canvas is ideal.
-https://unity.com/how-to/unity-ui-optimization-tips
+[Reference](https://unity.com/how-to/unity-ui-optimization-tips) Every time an element on a canvas is updated, the whole canvas is redrawn. If elements are never being updated, keeping them on a single canvas is ideal.
 
 #### Q24. What does the C# Space attribute used below achieved?
 
-    [Space(20)]
-    Public string PlayerName;
+```c#
+[Space(20)]
+Public string PlayerName;
+```
 
 - [ ] It inserts 20 space characters as a default value into the string variable below
 - [ ] It inserts 20 pixels of margin on all edges around the variable inside the Object Inspector
-- [ ] It inserts 20 pixels of empty space above the variable inside the Object Inspector
-- [x] It inserts 20 pixels of empty space below the variable inside the Object Inspector
+- [x] It inserts 20 pixels of empty space above the variable inside the Object Inspector
+- [ ] It inserts 20 pixels of empty space below the variable inside the Object Inspector
 
-This is a great way to customize your inspector without writing a new inspector script for it.
-https://docs.unity3d.com/ScriptReference/SpaceAttribute.html
+[Reference](https://docs.unity3d.com/ScriptReference/SpaceAttribute.html) This is a great way to customize your inspector without writing a new inspector script for it.
 
 #### Q25. Every time you double-click a C# script file from the Project window, Unity prints the message below (or something very similar) to the console. What is a reasonable step in trying to solve this? Cannot start process because a file name has not been provided
 
@@ -225,8 +227,7 @@ https://docs.unity3d.com/ScriptReference/SpaceAttribute.html
 - [ ] AnimationInfo
 - [ ] AnimatorUtility
 
-`OnStateMachineEnter()` and `OnStateMachineExit()` are the methods of the StateMachineBehavior class that handle this. AnimatorClipInfo displays information about the current clip being played, AnimatiorUtility deals with transform hierarchy, and AnimationInfo was removed in version 5.0.
-https://docs.unity3d.com/ScriptReference/StateMachineBehaviour.html
+[Reference](https://docs.unity3d.com/ScriptReference/StateMachineBehaviour.html) `OnStateMachineEnter()` and `OnStateMachineExit()` are the methods of the StateMachineBehavior class that handle this. AnimatorClipInfo displays information about the current clip being played, AnimatiorUtility deals with transform hierarchy, and AnimationInfo was removed in version 5.0.
 
 #### Q29. How can you change the unique bundle identifier for a mobile build?
 
@@ -272,7 +273,7 @@ https://docs.unity3d.com/ScriptReference/StateMachineBehaviour.html
 
 #### Q35. What does this code fragment do when attached to a rigged character?
 
-```
+```c#
     public Animator avatar;
     public Transform lookAtObj;
     void OnAnimatorIK(int layerIndex)
@@ -301,9 +302,10 @@ https://docs.unity3d.com/ScriptReference/StateMachineBehaviour.html
 - [ ] Motion capture
 - [x] Photogrammetry
 
-When you use photogrammetry to scan in models from the real world, and bring in those models into Unity (or any renderer), you will notice that the lighting information is baked into the texture. You can remove the baked in lighting information with various tools online, but even Unity themeless wrote a custom tool for just this; check it out!
-https://github.com/Unity-Technologies/DeLightingTool
-https://github.com/Unity-Technologies/DeLightingTool/blob/master/Assets/DeLightingTool/Documentation/De-LightingTool.pdf
+`When you use photogrammetry to scan in models from the real world, and bring in those models into Unity (or any renderer), you will notice that the lighting information is baked into the texture. You can remove the baked in lighting information with various tools online, but even Unity themeless wrote a custom tool for just this; check it out!`
+
+1. [Reference](https://github.com/Unity-Technologies/DeLightingTool)
+2. [Reference](https://github.com/Unity-Technologies/DeLightingTool/blob/master/Assets/DeLightingTool/Documentation/De-LightingTool.pdf)
 
 #### Q38. Humanoid character assets, like NPCs and the player character, feature on Avatar object. Which statement best describes its purpose?
 
@@ -321,7 +323,7 @@ https://github.com/Unity-Technologies/DeLightingTool/blob/master/Assets/DeLighti
 - [ ] Select **Edit > Enable Vertex Snap** from the menu, and then select your object
 - [x] While holding down the V key, click and drag your object from a corner vertex to its destination
 
-https://docs.unity3d.com/Manual/PositioningGameObjects.html#VtxSnapping
+[Reference](https://docs.unity3d.com/Manual/PositioningGameObjects.html#VtxSnapping)
 
 #### Q40. Which statement best descibes the function Quaternion.Euler?
 
@@ -333,7 +335,7 @@ https://docs.unity3d.com/Manual/PositioningGameObjects.html#VtxSnapping
 Simplfying the math: Unity uses Quaternions internally to avoid Gimbal lock.
 The Euler XYZ (Pitch, Yaw, and Roll) axises can lock up when two axies are aligned.
 Quaternion.Euler converts the Euler number provided to the internally used Quarternion, to prevent this problem.
-https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
+[Reference](https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html)
 
 #### Q41. What does the Destroy function do?
 
@@ -342,8 +344,7 @@ https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
 - [ ] It deletes the specified game object when the application terminates
 - [ ] It deletes the specified game object immidaitely
 
-> The object obj is destroyed immediately after the current Update loop, or t seconds from now if a time is specified.
-> https://docs.unity3d.com/ScriptReference/Object.Destroy.html
+[Reference](https://docs.unity3d.com/ScriptReference/Object.Destroy.html)`The object obj is destroyed immediately after the current Update loop, or t seconds from now if a time is specified.`
 
 #### Q42. You can programmatically control audio effects, like Pitch and Reverb, from C# scripts using which feature of an Audio Mixer asset?
 
@@ -352,8 +353,7 @@ https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html
 - [ ] ParamEQ
 - [ ] Audio Mixer groups
 
-Audio attenuation is about energy loss, commonly refered to as "gain". ParamEQ allows you to change the frequency of the audio - "pitch", with no C# support. Audio Mixer groups do allow you to control audio effects, but not through C#.
-Official Unity Tutorial: https://www.youtube.com/watch?v=9tqi1aXlcpE
+[Official Unity Tutorial:](https://www.youtube.com/watch?v=9tqi1aXlcpE)`Audio attenuation is about energy loss, commonly refered to as "gain". ParamEQ allows you to change the frequency of the audio - "pitch", with no C# support. Audio Mixer groups do allow you to control audio effects, but not through C#.`
 
 #### Q43. Multiple animations may be mixed together on a single character, selectively on different limbs. Which Mecanim feature supports this?
 
@@ -362,8 +362,7 @@ Official Unity Tutorial: https://www.youtube.com/watch?v=9tqi1aXlcpE
 - [ ] StateMachineBehaviour scripts
 - [ ] animation events
 
-Mip Maps are a technique that improves image quality and reduces rendering speed, at the cost of storage space, by including smaller copies of the image in the same file. Animation events allow you to call functions at points in the timeline.
-https://docs.unity3d.com/Manual/class-AvatarMask.html
+[Reference](https://docs.unity3d.com/Manual/class-AvatarMask.html)`Mip Maps are a technique that improves image quality and reduces rendering speed, at the cost of storage space, by including smaller copies of the image in the same file. Animation events allow you to call functions at points in the timeline.`
 
 #### Q44. What does the PlayableDirector component allow you to do?
 
@@ -372,8 +371,7 @@ https://docs.unity3d.com/Manual/class-AvatarMask.html
 - [x] control the playback of a timeline instance in the scene
 - [ ] record a gameplay session to a video file
 
-The PlayableDirector component stores the link between a Timeline instance and a Timeline Asset.
-https://docs.unity3d.com/2019.2/Documentation/Manual/class-PlayableDirector.html
+[Reference](https://docs.unity3d.com/2019.2/Documentation/Manual/class-PlayableDirector.html)`The PlayableDirector component stores the link between a Timeline instance and a Timeline Asset.`
 
 #### Q45. What does the Grid component do?
 
@@ -389,14 +387,16 @@ https://docs.unity3d.com/2019.2/Documentation/Manual/class-PlayableDirector.html
 - [ ] signals
 - [ ] packets
 
-EventSystem is not a timeline feature, neither are packets. Timeline signals are a subfeature of the markers, markers can directly initiate code, while a signal can only send the signal to a reciver.
-https://forum.unity.com/threads/new-in-2019-1-marker-customization.594712/ and https://blog.unity.com/technology/how-to-create-custom-timeline-markers
+`EventSystem is not a timeline feature, neither are packets. Timeline signals are a subfeature of the markers, markers can directly initiate code, while a signal can only send the signal to a reciver.`
+
+1. [Reference](https://forum.unity.com/threads/new-in-2019-1-marker-customization.594712)
+2. [Reference](https://blog.unity.com/technology/how-to-create-custom-timeline-markers)
 
 #### Q47. Which code sample uses C# properties for creating the health functionality?
 
 - [ ] A
 
-```
+```c#
 public class Health : MonoBehavior
 {
     private float HealthPoints = 100f;
@@ -418,7 +418,7 @@ public class Health : MonoBehavior
 
 - [ ] B
 
-```
+```c#
 public class Health : MonoBehavior
 {
     public UnityEvent OnHealthChanged;
@@ -440,7 +440,7 @@ public class Health : MonoBehavior
 
 - [x] C
 
-```
+```c#
 public class Health : MonoBehavior
 {
     public float HealthPoints
@@ -463,7 +463,7 @@ public class Health : MonoBehavior
 
 - [ ] D
 
-```
+```c#
 public class Health : MonoBehaviour
 {
     public float HealthPoints = 100f;
@@ -477,4 +477,92 @@ public class Health : MonoBehaviour
 ```
 
 `get` and `set` are the clear indicators that a C# property is being used.
-https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties
+[Reference](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties)
+
+#### Q48. Which statement is not true?
+
+- [ ] A Coroutines will continue running on deactivated objects
+- [ ] B All component scripts inherit from `MonoBehaviour`
+- [x] C Only humanoid characters feature bones
+- [ ] D The `Update` function is never called automatically while an object is deactivated
+
+[Reference](https://docs.unity3d.com/2017.3/Documentation/Manual/GenericAnimations.html)
+
+#### Q49. When is the `Reset` method of `MonoBehaviour` invoked automatially?
+
+- [ ] A When a game object moves from one scene to another
+- [x] B When adding a component to an object or resetting its values in Edit mode
+- [ ] C When a scene begins or is restarted
+- [ ] D When the scene begins or restarts for a deactivated game object
+
+[Reference](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Reset.html)`Reset` is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode.
+
+#### Q50. Which C# attribute allows a class and its methods to run inside the editor during Edit mode?
+
+- [ ] A [Range(0,10)]
+- [ ] B [Live]
+- [ ] C [RunInEditor]
+- [x] D [ExecuteAlways]
+
+`ExecuteAlways` makes instances of a script always execute, both as part of Play Mode and when editing. By default, MonoBehaviours are only executed in Play Mode and only if they are on GameObjects in the main stage containing the user Scenes. By adding this attribute, any instance of the MonoBehaviour will have its callback functions executed at all times.
+
+1. [Reference](https://docs.unity3d.com/ScriptReference/ExecuteAlways.html)
+   Do not fall for `[RunInEditor]`! It looks similar to `MonoBehaviour.runInEditMode` and `[ExecuteInEditMode]` both of which are legit but not mentioned as possible answers.
+2. [Reference](https://docs.unity3d.com/ScriptReference/MonoBehaviour-runInEditMode.html)
+
+#### Q51. The `IsPointerOverGameObject` static function of the `EventSystem` class is useful for creating which behaviour?
+
+- [ ] A moving UI elements in sync with the cursor as it drags across the screen
+- [ ] B changing the highlight of buttons as the cursor moves over them
+- [x] C preventing mouse clicks on game objects behind the UI canvas <- i believe this is the correct answer but supervision would be helpful
+- [ ] D identifying which 3D object the cursor is hovering over
+
+#### Q52. Which C# code fragment continuously updates an object's yaw (Y rotation)?
+
+- [ ] `c# transform.localRotation *= Quaternion.Euler(0f, RotSpeed * Time.deltaTime, 0f);`
+- [x] `c# transform.Rotate(Vector3.right, RotSpeed * Time.deltaTime);`
+- [ ] `c# transform.RotateAround(Vector3.up, RotSpeed * Time.deltaTime);`
+- [ ] `c# transform.SetParent(null);`
+
+#### Q53. What can you to improve the searchability of you project's assets?
+
+- [x] labels
+- [ ] tags
+- [ ] instance IDs
+- [ ] layers
+
+#### Q54. The Y keyboard shortcut activates which in-editor tool?
+
+- [ ] Hide
+- [ ] Scale
+- [ ] Transform
+- [x] Rotate
+
+#### Q55. What does the Input.touchCount variable represent?
+
+- [ ] The number of keyboard inputs.
+- [ ] The number of mouse clicks.
+- [x] The number of touches currently present on the screen.
+- [ ] The number of frame updates.
+
+[Reference](https://docs.unity3d.com/ScriptReference/Input-touchCount.html)
+
+#### Q56. During gameplay, you need to serialize selected variables (data) of all enemies to send over a network for parsing to generate statistics about the current play session. Which Unity class helps convert object data to JSON text format?
+
+- [ ] XMLSerializer
+- [ ] BinaryFormatter
+- [ ] JsonSerializer
+- [x] JsonUtility
+
+[Reference](https://docs.unity3d.com/Manual/script-Serialization.html)
+
+#### Q57. Which texture format is generally avoided in Unity?
+
+- [ ] PNG
+- [x] Uncompressed
+- [ ] JPEG
+- [ ] GIF
+
+[Reference](https://docs.unity3d.com/Manual/texture-compression-formats.html)
+
+> `Observation`: I tested it in Unity itself and pressing it activated the rotate, scale and transform function, in the documentation (unity 2018.2) it says that it is a unified one, in the documentation of the most recent unity (2022.2) I did not find anything different
