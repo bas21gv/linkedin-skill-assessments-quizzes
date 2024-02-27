@@ -296,8 +296,8 @@
 
 #### Q43. What is the relationship between SAM template and CloudFormation template files?
 
-- [x] SAM templates are a superset of CloudFormation templates. SAM templates include additional resource types.
 - [ ] SAM templates have some overlap with CloudFormation templates. Both SAM and CloudFormation templates include resource types that are not in the other type of template.
+- [x] SAM templates are a superset of CloudFormation templates. SAM templates include additional resource types.
 - [ ] CloudFormation templates are a superset of SAM templates. CloudFormation templates include additional resource types.
 - [ ] SAM templates are a different name for CloudFormation templates. Both template types include the same resource types.
 
@@ -573,3 +573,21 @@
 - [ ] Lambda does not allow vedio encoding.
 - [ ] s3 transfer bottlenecks
 - [ ] s3 cannot talk to Lambda
+
+#### Q74. What is an AWS service or application that triggers a Lambda to run?
+
+- [ ] an input trigger
+- [ ] an input event
+- [x] an event source
+- [ ] an event trigger
+
+**Explanation**
+
+- `An event source is an AWS service or developer-created application that produces events that trigger an AWS Lambda function to run. Some services publish these events to Lambda by invoking the cloud function directly (for example, Amazon S3).` https://aws.amazon.com/lambda/faqs/#:~:text=An%20event%20source%20is%20an,for%20example%2C%20Amazon%20S3
+
+#### Q75. What does a Lambda need to access DynamoDB tables?
+
+- [ ] HTTPS certificate
+- [x] IAM role permissions
+- [ ] DynamoDB SDK
+- [ ] admin role

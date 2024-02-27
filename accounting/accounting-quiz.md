@@ -444,13 +444,13 @@ I'm not 100% sure on this.
 #### Q52. What does an inventory turnover ratio measure?
 
 - [ ] the current value of the inventory
-- [ ] the number of times inventory was sold during the period
+- [x] the number of times inventory was sold during the period
 - [ ] how it compares with the industry average
 - [ ] whether the company can maintain the same inventory levels compared to industry averages
 
 #### Q53. The company earned a gross profit of $4,000,000 and had net sales of $12,000,000. What is the gross margin and what does the result imply to the reviewer?
 
-- [ ] The 3.33% gross margin represents for every dollar in sales, the company spends $0.9667 to produce the product sold.
+- [x] The 3.33% gross margin represents for every dollar in sales, the company spends $0.9667 to produce the product sold.
 - [ ] The question does not provide sufficient information to offer a proper calculation.
 - [ ] The 3.33% gross margin represents for every dollar in sales, the company spends $0.0667 to produce the product sold.
 - [ ] The 3.33% gross margin represents for every dollar in sales, the company spends $0.0333 to produce the product sold.
@@ -520,25 +520,25 @@ Therefore, the price variance for 1,000 widgets is $3,000.
 - [ ] to demonstrate to management the level of sales the company will achieve
 - [ ] to provide shareholders and the board of directors confidence in management's abilities
 - [ ] to allow management to compile all of the other operational budgets once they are completed
-- [ ] to provide management with a high-level overview of the company finances and be a central planning tool
+- [x] to provide management with a high-level overview of the company finances and be a central planning tool
 
 #### Q62. What is true about an internal control system?
 
 - [ ] An internal control system is not effective until human error is eliminated or migrated.
 - [ ] Any internal control activities evaluated and adopted by a company should never be evaluated in terms of cost-benefit.
-- [ ] Only mid-to large-sized companies and governmental organizations need to ensure proper internal control activities.
-- [ ] An internal control system helps a company achieve reliable financial reporting, effective and efficient operations, and compliance with laws and regulations.
+- [ ] Only mid-to-large-sized companies and governmental organizations need to ensure proper internal control activities.
+- [x] An internal control system helps a company achieve reliable financial reporting, effective and efficient operations, and compliance with laws and regulations.
 
 #### Q63. According to the cost formula Y = $20,000 + $4x, what would be the total cost at an activity level of 15,000 units?
 
 - [ ] $60,000
 - [ ] $20,000
 - [ ] $35,000
-- [ ] $80,000
+- [x] $80,000
 
 #### Q64. A company can change to a new accounting principle if management can justify that the change will result in what?
 
-- [ ] more relevant decision-making information
+- [x] more relevant decision-making information
 - [ ] lower net income to report for tax purposes
 - [ ] changing depreciation methods for higher net income
 - [ ] reduced potential for administrative error
@@ -562,9 +562,9 @@ Therefore, the price variance for 1,000 widgets is $3,000.
 - [ ] Confirm whether probable legal action is disclosed to the auditor.
 - [ ] Investigate whether liens on assets are committed as collateral.
 - [ ] Determine the client's planned and imminent purchase commitments.
-- [ ] Gain a clear and proper understanding of the client's internal control processes.
+- [x] Gain a clear and proper understanding of the client's internal control processes.
 
-#### Q68. At McKay Company, machine hours are limited. There is more demand for McKay's products than it can produce due to limited machine hours. To maximize profits, the company should evaluate each product's **\_**.
+#### Q68. At McKay Company, machine hours are limited. Due to limited machine hours,there is more demand for McKay's products than it can produce . To maximize profits, the company should evaluate each product's **\_**.
 
 - [x] contribution margin per unit
 - [ ] segment margin per unit
@@ -613,7 +613,7 @@ Therefore, the price variance for 1,000 widgets is $3,000.
 - [ ] management's complete disclosure of unresolved legal action
 - [ ] limited competition in the company's industry resulting in increasing profitability
 - [ ] the audit committee's approval of specific accounting methods and principles
-- [ ] year-end financial adjustments significantly impacting the financial results
+- [x] year-end financial adjustments significantly impacting the financial results
 
 #### Q75. Which step of the accounting cycle involves checking to see if total debits equal total credits?
 

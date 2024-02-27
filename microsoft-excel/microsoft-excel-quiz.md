@@ -398,10 +398,10 @@
 
 #### Q53. In the formula `=VLOOKUP(A1,D1:H30,3,FALSE)`, the lookup value (A1) is being looked for in **\_**.
 
-- [ ] column D
+- [x] column D
 - [ ] columns D through H
 - [ ] column H
-- [x] column F
+- [ ] column F
 
 #### Q54. An .xlsx workbook is saved into .csv format. What is preserved in the new .csv file?
 
@@ -735,7 +735,6 @@ https://sfmagazine.com/post-entry/may-2020-excel-sharing-a-pivot-table-slicer-be
 - [ ] Total Sales This Year; Market Region
 - [ ] Representative ID Number; Total Sales This Year
 - [x] Market Region; Total Sales This Year
--
 
 #### Q88. Cell A1 contains the number 3. Which formula returns the text Apple?
 
@@ -1306,15 +1305,15 @@ Alignment** tab, click**\_\*\*.
 
 - [ ] You cannot do this in Excel.
 - [ ] Right-click the axis, select **Format Axis**, and scroll to the desired minimum and maximum values.
-- [ ] Right-click the axis and select **Format Axis > Axis Options**. Then change the minimum and maximum values.
+- [x] Right-click the axis and select **Format Axis > Axis Options**. Then change the minimum and maximum values.
 - [ ] Click the individual axis values and change them manually.
 
 #### Q158. Given the source data, how do you transform the middle PivotTable to appear like the rightmost PivotTable?
 
 ![Image](images/Q158.png?raw=true)
 
-- [ ] &shy;
-- [ ] &shy;
+- [ ] `&shy;`
+- [ ] `&shy;`
 - [ ] Below answer should be right
 - [x] Right-click any row field value in the pivot table and select Group.
 

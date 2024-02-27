@@ -284,7 +284,7 @@
 }
 ```
 
-- [x] C
+- [ ] C
 
 ```json
 {
@@ -304,7 +304,7 @@
 }
 ```
 
-- [ ] E
+- [x] E
 
 ```json
 {
@@ -318,17 +318,17 @@
 
 #### Q19. Can trailing commas be used in objects and arrays?
 
-- [x] yes
+- [ ] yes
 - [ ] only if there is more than one item
-- [ ] no
+- [x] no
 - [ ] only when arrays and objects contain more than 10 items
 
-[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#:~:text=JavaScript%20has%20allowed%20trailing%20commas%20in%20array%20literals%20since%20the%20beginning.%20Trailing%20commas%20are%20now%20also%20allowed%20in%20object%20literals%2C%20function%20parameters%2C%20named%20imports%2C%20named%20exports%2C%20and%20more.) **Explanation**: Trailing commas can be used in objects and arrays.
+[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas#:~:text=JSON%2C%20however%2C%20disallows%20all%20trailing%20commas.)
 
 #### Q20. Which whitespace characters should be escaped within a string?
 
-- [ ] All whitespace is allowed.
-- [x] double quotes, slashes new lines, and carriage returns
+- [x] All whitespace is allowed.
+- [ ] double quotes, slashes new lines, and carriage returns
 - [ ] new lines and carriage returns only
 - [ ] double quotes only
 
@@ -767,9 +767,7 @@ null
 
 #### Q58. How would you make the following string valid in JSON?
 
-```json
-"name": 'bb-8'
-```
+`"name": 'bb-8'`
 
 - [ ] name: "bb-8"
 - [ ] "name": \'bb-8\'
@@ -938,9 +936,7 @@ null
 
 #### Q82. Which code is a valid JSON equivalent of the key/value pair shown that also preserves the data type?
 
-```json
-variance: -0.0823
-```
+`variance: -0.0823`
 
 - [ ] variance: "-0.0823"
 - [ ] variance: -0.0823
@@ -1055,9 +1051,9 @@ myVehicleContents.van.inside['inside'] = gloveBoxContents;
 #### Q91. Which is _not_ a valid JSON number
 
 - [ ] `99999999999999999999`
-- [x] `"42"`
+- [ ] `"42"`
 - [ ] `-32`
-- [ ] `1111.00.110011`
+- [x] `1111.00.110011`
 
 #### Q92. What is the maximum string length in JSON?
 
@@ -1174,74 +1170,15 @@ So the correct options are A and D.
 
 #### Q98. Which is the valid JSON equivalent of the data shown?
 
-{
-photo: {
-width: 1600,
-height: 900,
-binaries: {
-url: 'https://www.example.com/images/34097349843',
-thumbnail: 'https://www.example.com/images/thumbs/34097349843'
-},
-animated: false,
-tags: [116, 943, 234, 38793],
-}
-}
+`json{photo: {width: 1600, height: 900, binaries: { url: 'https://www.example.com/images/34097349843', thumbnail: 'https://www.example.com/images/thumbs/34097349843' }, animated: false, tags: [116, 943, 234, 38793], }}`
 
-- [ ] A
-      {
-      "photo": {
-      "width": 1600,
-      "height": 900,
-      "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-      },
-      "animated": "false",
-      "tags": [116, 943, 234, 38793]
-      }
-      }
+- [ ] `{"photo": {"width": 1600, "height": 900, "binaries": { "url": "https://www.example.com/images/34097349843", "thumbnail": "https://www.example.com/images/thumbs/34097349843"}, "animated": "false", "tags": [116, 943, 234, 38793]}}`
 
-- [ ] B
-      {
-      "photo": {
-      "width": 1600,
-      "height": 900,
-      "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-      },
-      "animated": false,
-      "tags": [116, 943, 234, 38793]
-      }
-      }
+- [ ] `{"photo": {"width": 1600, "height": 900, "binaries": { "url": "https://www.example.com/images/34097349843", "thumbnail": "https://www.example.com/images/thumbs/34097349843"}, "animated": false, "tags": [116, 943, 234, 38793]}}`
 
-- [ ] C
-      {
-      "photo": {
-      "width": 1600,
-      "height": 900,
-      "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-      },
-      "animated": true,
-      "tags": [116, 943, 234, 38793]
-      }
-      }
+- [ ] `{"photo": {"width": 1600, "height": 900, "binaries": {"url": "https://www.example.com/images/34097349843", "thumbnail": "https://www.example.com/images/thumbs/34097349843"}, "animated": true, "tags": [116, 943, 234, 38793]}}`
 
-- [x] D
-      {
-      "photo": {
-      "width": "1600",
-      "height": "900",
-      "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-      },
-      "animated": "false",
-      "tags": ["116", "943", "234", "38793"]
-      }
-      }
+- [x] `{"photo": {"width": "1600", "height": "900", "binaries": { "url": "https://www.example.com/images/34097349843", "thumbnail": "https://www.example.com/images/thumbs/34097349843"}, "animated": "false", "tags": ["116", "943", "234", "38793"]}}`
 
 #### Q99. When you need to set the value of a key in JSON to be blank, what is the correct syntax for the empty value?
 
@@ -1275,50 +1212,15 @@ tags: [116, 943, 234, 38793],
 
 #### Q103. You need to assemble a list of members, but your JSON is not parsing correctly. How do you change it?
 
-{
-"avengers": [
-"iron man",
-"hulk",
-"thor",
-"black widow",
-"ant man",
-"spider man'
-]
-}
+`{"avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man" ]}`
 
-- [x] A
-      {
-      "avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man"]
-      }
+- [x] `{"avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man"]}`
 
-- [ ] B
-      {
-      'avengers': [
-      {'iron man',
-      'hulk',
-      'thor',
-      'black widow',
-      'ant man',
-      'spider man'}
-      ]
-      }
+- [ ] `{'avengers': {'iron man', 'hulk', 'thor', 'black widow', 'ant man', 'spider man'}]}`
 
-- [ ] C
-      {
-      "avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man"]
-      }
+- [ ] `{"avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man"]}`
 
-- [ ] D
-      {
-      "avengers": {[
-      "iron man",
-      "hulk",
-      "thor",
-      "black widow",
-      "ant man",
-      "spider man"
-      ]}
-      }
+- [ ] `{"avengers": {["iron man", "hulk", "thor", "black widow", "ant man", "spider man" ]}}`
 
 #### Q104. Which reference to the Unicode character U+1F602 complies with the JSON standard?
 
@@ -1429,23 +1331,65 @@ Explanation:- When you have a key in a JSON document that contains special chara
 - [ ] number
 - [ ] string
 
-#### Q111. What does JSON with padding (JSON-P) use to make a request?
-
-- [ ] an `<origin>` element
-- [ ] a header request
-- [x] the `<script>` element
-- [ ] the XMLHttpRequest object
-
-#### Q112. Which is an invalid JSON value?
+#### Q111. Which is an invalid JSON value?
 
 - [ ] `"'|=(_)(X 72(_)|\/||\*'"`
 - [ ] `"|=(_)(X 72(_)|\/||\*"`
 - [ ] `"|=(_)(X\" \"72(_)|\/||\*"`
 - [x] `"\s(_)(X 72(_)|\/||\*"`
 
-#### Q113. What are the valid number types in JSON?
+#### Q112. What are the valid number types in JSON?
 
 - [ ] Whole Numbers and Decimals
 - [ ] Real Numbers and Fractions
 - [x] Integer, Floating Points, and Exponents (Scientific Notation, e.g., 3e4)
 - [ ] Prime Numbers and Complex Numbers
+
+#### Q114. What is the purpose of JSON Web Tokens (JWT)?
+
+- [ ] To validate JSON data
+- [ ] To store sensitive information
+- [x] To represent information between parties
+- [ ] To create JSON schemas
+
+#### Q115. What is JSON-RPC used for?
+
+- [x] Remote procedure calls encoded in JSON
+- [ ] Rendering graphics in web applications
+- [ ] JavaScript execution control
+- [ ] Data validation in JSON
+
+#### Q116. Which of the following is a key difference between JSON and XML?
+
+- [ ] JSON uses tags
+- [ ] XML is more lightweight
+- [x] JSON is easier for humans to read
+- [ ] XML is used for programming, while JSON is for data exchange
+
+#### Q117. Which HTTP header is commonly used to prevent cross-site scripting (XSS) attacks when working with JSON?
+
+- [ ] Content-Encoding
+- [x] Access-Control-Allow-Origin
+- [ ] JSON-Security
+- [ ] XSS-Prevention
+
+#### Q118. What does the JSON Merge Patch format allow you to do?
+
+- [ ] Combine multiple JSON documents into one
+- [x] Partially update a JSON document
+- [ ] Compress JSON data for storage
+- [ ] Convert JSON to XML
+
+#### Q119. Which method is used to parse a JSON string and return a JavaScript object in modern web browsers?
+
+- [ ] parseJSON()
+- [x] JSON.parse()
+- [ ] evalJSON()
+- [ ] loadJSON()
+
+#### Q120. What is the primary purpose of JSON-LD (JSON Linked Data)?
+
+- [ ] To enable two-way data binding in JavaScript
+- [ ] To represent data in a more human-readable format
+- [x] To express structured data that is linked to other data
+- [ ] To create dynamic web pages with JSON

@@ -241,10 +241,12 @@
 -D. Lock guides have been enabled.
 -E. The guides are on a master page.
 
-- [ ] B, D, E (maybe)
+- [x] B, D, E
 - [ ] C, D, E
 - [ ] A, B, C
 - [ ] B, C, D
+
+[Ref.](https://textdoc.co/qumF5ASTHb2OLP8X)
 
 #### 33. You have an InDesign document with text on one layer and images on another. You want images with a text wrap applied to not wrap text when the layer is hidden. Where would you find the option to control this?
 
@@ -255,16 +257,18 @@
 
 #### 34. You select some text with the Type tool, then click the Eyedropper tool and click a Photoshop image on your page. What happens? (Select three answers.)
 
-    A. The color switches to black.
-    B. The color you click is applied to the text.
-    C. The color appears as a swatch in the Swatches panel.
-    D. The color appears in the Color panel.
-    E. If the image is in RGB mode, the text color is also set to RGB mode.
+A. The color switches to black.
+B. The color you click is applied to the text.
+C. The color appears as a swatch in the Swatches panel.
+D. The color appears in the Color panel.
+E. If the image is in RGB mode, the text color is also set to RGB mode.
 
 - [ ] A, B, D
 - [ ] A, C, E
 - [ ] B, D, E
-- [ ] B, C, D (maybe)
+- [x] B, C, D
+
+[Ref.](https://textdoc.co/0E9yiIPGW1DvVZJ3)
 
 #### 35. In an interactive document, you want two objects to fade in simultaneously on the page. Which panel helps you do this?
 
@@ -331,15 +335,15 @@
 
 #### 44. What is the gutter?
 
-- [ ]the distance between a block of type and the frame containing it
+- [ ] the distance between a block of type and the frame containing it
 - [x] the space between columns and column guides
 - [ ] another term for the slug area
 - [ ] the space between the bleed and the slug
 
 #### 45. Where do you set left and right indents for typing in a selected text frame?
 
-- [ ]in Type > Type Variables
-- [x]the Paragraph panel
+- [ ] in Type > Type Variables
+- [x] the Paragraph panel
 - [ ] the Paragraph Style dialog box
 - [ ] the Character panel
 
@@ -355,9 +359,9 @@
 ![Alt text](images/question_47.png)
 
 - [ ] Create a new color swatch in the Swatches panel based on Paper, and lower its opacity value.
-- [ ] ln the Effects panel, select Ghost Back from the FX menu.
-- [x] ln the Effects panel, click the word Fill, and change the opacity.
-- [ ] ln the Swatches panel, edit the Paper swatch to be partially transparent.
+- [ ] In the Effects panel, select Ghost Back from the FX menu.
+- [x] In the Effects panel, click the word Fill, and change the opacity.
+- [ ] In the Swatches panel, edit the Paper swatch to be partially transparent.
 
 #### 48. When you hover your mouse over a frame, the Content Grabber appears. However, when you click the Content Grabber, no image appears within the frame. What is most likely the cause of this?
 
@@ -430,7 +434,7 @@
 - [ ] The space between the two frames matches the grid spacing preference.
 - [ ] The space between the two frames is below the spacing limit set in Preferences.
 - [ ] The two frames are not yet aligned.
-- [ ] The space between the two frames equals the space between the frame and some other frame.??
+- [x] The space between the two frames equals the space between the frame and some other frame.??
 
 #### 57. What does a yellow triangle icon in the Links panel indicate about an image?
 
@@ -455,10 +459,12 @@
 
 #### 60. Which statement about importing a Microsoft Word document into InDesign is true?
 
-- [ ] Paragraph and character styles are removed and local InDesign formatting is applied.
+- [x] Paragraph and character styles are removed and local InDesign formatting is applied.
 - [ ] Images, hyperlinks, and special characters are stripped out.
 - [ ] Paragraph and character styles are mapped automatically when styles are named identically.
 - [ ] Footnotes, endnotes, and tables of contents are stripped out.
+
+[Ref.](https://helpx.adobe.com/in/indesign/using/paragraph-character-styles.html)
 
 #### 61. You select a frame and click Object > Arrange > Send to Back. The frame still appears above another object on your page. What is the most likely reason?
 
@@ -487,7 +493,7 @@
 
 - [ ] The field is blank and needs text.
 - [ ] The field contains nonvisible characters.
-- [ ] A GREP expression has been attached.
+- [x] A GREP expression has been attached.
 - [ ] InDesign is searching for text formatting.
 
 #### 65. A tagline that overlaps a graphic disappears when you move an image frame close to it. Why is this happening and how do you fix it?

@@ -589,7 +589,7 @@ export class HighlightDirective {
 - [x] D
 
   ```html
-  <input type="text" formControlName="username" #userName="ngModer" />
+  <input type="text" formControlName="username" #userName="ngModel" />
   <span *ngIf="userName.errors.minlength">
     Username must be at least {{ userName.errors.minlength.requiredLength }} characters.
   </span>
@@ -818,8 +818,9 @@ const userService = TestBed.get(UserService);
 - [ ] The TestBed is being used to test a component's view.
 - [x] The TestBed scaffolds an NgModule with two providers and handles any dependency injection. If any Angular class requests the DataService in its constructor, the TestBed will inject spy in that constructor.
 - [ ] The TestBed is configuring the test runner to tell it to only execute tests for the two providers listed in its providers array.
-- `All other tests be ignored, including tests that assert results against one of these providers and a non-defined provider.`
-  `Although it will work when multiple providers in this configuration are asserted against in a single test.`
+
+`All other tests be ignored, including tests that assert results against one of these providers and a non-defined provider.`
+`Although it will work when multiple providers in this configuration are asserted against in a single test.`
 
 #### Q45. What is the primary difference between a component and a directive?
 
@@ -1079,9 +1080,9 @@ References:
 <h1 [title]="userName">Current user is {{ userName }}</h1>
 ```
 
-- [ ] title="userName"
-- [x] title="{{ userName }}"
-- [ ] title="{{ 'userName' }}"
+- [ ] `title="userName"`
+- [x] `title="{{ userName }}"`
+- [ ] `title="{{ 'userName' }}"`
 - [ ] The only way to do it is by using the square brackets.
 
 #### Q57. What is the `async` pipe doing in this example?
@@ -1141,7 +1142,7 @@ export class TruncatePipe implements PipeTransform {
 ```
 
 - [ ] `{{ 'some long text' | truncate:10 }}`
-- [x] `{{ 'some long text' | truncate:10:true }}`
+- [x] `{{ 'some long text' | truncate: 10, true }}`
 - [ ] `{{ 'some long text' | truncate }}`
 - [ ] all of these answers
 
@@ -1385,7 +1386,7 @@ export class ProductNameComponent {  @Input() productName: string
 - [ ] A
 
   ```html
-  <span class="{{ isActive ? 'is-active' : '' }}" class="{{ canToggle ? 'can-toggle' : '' }}">
+  <span class="{{ isActive ? 'is-active' : '' }} {{ canToggle ? 'can-toggle' : '' }}">
     Employed
   </span>
   ```
@@ -1458,3 +1459,22 @@ export class CustomValidatorDirective implements Validator {}
 - [ ] CanActivate and CanLoad do the exact same thing.
 - [x] CanActivate is used to check access. CanLoad is used to preload data for the route.
 - [ ] CanLoad is used at app startup to allow or deny routes to be added to the route table. CanActivate is used to manage access to routes at the time they are requested
+
+#### Q84. With the following component class, what template syntax would you use in the template to display the result of calling the currentYear class function?
+
+```ts
+@Component({
+  selector: 'app-date-card',
+  template: '',
+})
+export class DateCardComponent {
+  currentYear() {
+    return new Date().getFullYear();
+  }
+}
+```
+
+- [x] `{{ currentYear() }}`
+- [ ] `{{ component.currentYear() }}`
+- [ ] `{{ currentYear }}`
+- [ ] Class functions cannot be called from template syntax.

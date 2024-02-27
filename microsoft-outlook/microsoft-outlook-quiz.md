@@ -7,7 +7,7 @@
 - [ ] email messages
 - [ ] appointments and meetings
 
-#### Q2. What is the default permission that other people in your organization have to your calendar?
+#### Q2. What is the default permission that other people in your organization have with respect to your calendar?
 
 - [x] They can view free/busy details only.
 - [ ] They can edit.
@@ -16,14 +16,14 @@
 
 [Reference](https://support.microsoft.com/en-us/office/share-an-outlook-calendar-with-other-people-353ed2c1-3ec5-449d-8c73-6931a0adab88)
 
-#### Q3. Your boss sends you an email with a request to set up a meeting and copies all meeting attendees on the message. What is the fastest way to create the calendar appointment
+#### Q3. Your boss sends you an email with a request to set up a meeting and copies all meeting attendees on the message. What is the fastest way to create the calendar appointment?
 
 - [ ] Click New Items > New Appointment.
 - [ ] Click Calendar > New Meeting, and then copy and paste information as needed.
 - [x] with the email open, click Meeting on the Home ribbon or Message tab.
 - [ ] Click Reply All.
 
-#### Q4. You are running low on Outlook storage space. How might you address this problem?
+#### Q4. You are running low on Outlook storage space. How would you address this problem?
 
 - [x] all of these answers
 - [ ] Archive messages you are done with.
@@ -134,7 +134,7 @@ C. Read receipts are expensive, so some organizations turn them off.
 - [ ] Drag the email message and drop it on the Tasks icon
 - [ ] Right click the email message, drag and drop it on the Tasks icon, and click Move Here as Task with Attachment
 
-#### Q19. There are two types of Outlook rules. One is server-based rules, which run for Exchange Server. What are the other kind, which in part or in whole cannot run on Exchange Server, and when do the execute?
+#### Q19. There are two types of Outlook rules. One is server-based rules, which run for Exchange Server. What is the other kind, which in part or in whole cannot run on Exchange Server, and when do they execute?
 
 - [x] client-only rules; when Outlook is running
 - [ ] Outlook-based rules; when Outlook is running
@@ -148,7 +148,7 @@ C. Read receipts are expensive, so some organizations turn them off.
 - [ ] Create a rule to apply conditional formatting to all messages where you are in the CC line
 - [x] Turn on Focused Inbox
 
-#### Q21. How can you quickly locate emails with large attachment?
+#### Q21. How can you quickly locate emails with large attachments?
 
 - [ ] Sort the messages by size then filter by **Has: Attachments**
 - [ ] Sort the messages by sender
@@ -247,7 +247,7 @@ C. Some people have already accepted, so you must cancel this meeting and create
 - [ ] Reviewer
 - [ ] Editor
 
-#### Q34. Why might you create an additional contacts folder?
+#### Q34. Why would you create an additional contacts folder?
 
 - [x] To store contacts to share with colleagues
 - [ ] To avoid exceeding 500 contacts per folder limit
@@ -291,7 +291,7 @@ C. Some people have already accepted, so you must cancel this meeting and create
 - [x] Group By
 - [ ] By Sender
 
-#### Q40. You have a contact folder for members and you need to track two additional pieces of member information: start date and last renewal. What is the simplest wat to track this information?
+#### Q40. You have a contact folder for members and you need to track two additional pieces of member information: start date and last renewal. What is the simplest way to track this information?
 
 - [ ] Export your contacts to Excel, which ash lots of columns; add the data; and then import the contacts back to Outlook
 - [x] Use the Field Chooser to create two new columns of type Date in the folder
@@ -330,7 +330,7 @@ D. Because you cannot create a search folder for a subfolder
 
 - [ ] The Inbox folder is sorted by size.
 - [ ] The People peek is open and Sally Kerner's card has focus.
-- [ ] Focused Inbox is being used.
+- [x] Focused Inbox is being used.
 - [ ] The People peek is open and has focus.
 
 #### Q45. Suppose you select a message in Focused Inbox and then chose Move to Other, but the message does not move. What is the most likely cause?
@@ -388,10 +388,10 @@ D. Because you cannot create a search folder for a subfolder
 
 #### Q52. Which criteria can you select to filter email in the Focused folder?
 
-- [ ] unread status
-- [ ] importance
+- [x] unread status
+- [x] importance
 - [ ] message size
-- [ ] date received
+- [x] date received
 
 #### Q53. A meeting reminder showed up and you accidently closed it. What is the best way to bring back the reminder when in Calendar view?
 
@@ -519,7 +519,7 @@ D. Because you cannot create a search folder for a subfolder
 - [ ] The calendar view is not displaying properly. Click Reset View to fix it.
 - [ ] When you add a category to an appointment, the category color is used as the background color.
 - [ ] You have an appointment that ends after midnight.
-- [ ] You have an all-day event marked as Busy, Out of Office, or Tentative.
+- [x] You have an all-day event marked as Busy, Out of Office, or Tentative.
 
 #### Q71. You are having difficulty reading an email due to the small text size. What is the easiest way to make this email more readable?
 
@@ -540,7 +540,7 @@ D. Because you cannot create a search folder for a subfolder
 - [ ] the Simplified Ribbon
 - [ ] To-Do Bar
 - [ ] Quick Access Toolbar
-- [ ] Navigation Bar
+- [x] Navigation Bar
 
 #### Q74. To keep your Inbox folders organized and lean, where should you move old messages?
 
@@ -677,17 +677,17 @@ D. Because you cannot create a search folder for a subfolder
 
 #### Q92. You have a meeting from 2 to 3 p.m. next friday and have been invited to a second meeting in a different bulding starting at 3 p.m.. You want to attend both meetings but need time to get from the first to the second. What is an efficient way to respond to the organizer of the second meeting to allot 30 minutes of travel?
 
-- [ ] &shy;
-- [ ] &shy;
+- [ ] `&shy;`
+- [ ] `&shy;`
 - [ ] decline and propose new time
 - [x] tenctative and propose new time
 
 #### Q93. What happens when you try to add new account on Outlook?
 
 - [x] transmission
-- [ ] &shy;
-- [ ] &shy;
-- [ ] &shy;
+- [ ] `&shy;`
+- [ ] `&shy;`
+- [ ] `&shy;`
 
 #### Q94. When you back up or export your contacts directly from Outlook without using additional applications, what type of file will you export?
 
